@@ -1,0 +1,11 @@
+{% extends "bace.html" %}
+{% block contact %}
+<div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-body">
+      {% for user in all %}
+        <h5>{{user.name}}</h5>
+        <a style="background-color: red; border-radius: 5px; text-decoration: none;" class="card-text" href="{% url 'detail' user.id %}">more..</a>
+        {% endfor %}
+    </div>
+  </div>
+{% endblock contact %}

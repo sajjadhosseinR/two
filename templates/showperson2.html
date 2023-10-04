@@ -1,0 +1,12 @@
+{% extends "bace.html" %}
+{% block content %}
+{% for user in all %}
+
+<h4> {{user.name}}</h4>
+<a href='{% url "dperson2" user.id %}' style="text-decoration: none;">show detail</a>
+
+
+{% endfor %}
+<br>
+<a href="{% url 'create2' %}">add entry</a>
+{% endblock content %}

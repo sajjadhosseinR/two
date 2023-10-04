@@ -1,0 +1,8 @@
+{% extends "bace.html" %}
+{% block content %}
+    <h4>{{user.name}}</h4>
+    <h4>{{user.family}}</h4>
+    <h4>{{user.age}}</h4>
+    <a href="{% url 'p2delete' user.id %}">delete</a>
+    <a href="{% url 'p2update' user.id %}">update</a>
+{% endblock content %}
